@@ -12,6 +12,8 @@
 		ACC9F9A121008DB9008FC99D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC9F99F21008DB9008FC99D /* Main.storyboard */; };
 		ACC9F9A321008DBC008FC99D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC9F9A221008DBC008FC99D /* Assets.xcassets */; };
 		ACC9F9A621008DBC008FC99D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC9F9A421008DBC008FC99D /* LaunchScreen.storyboard */; };
+		ACC9F9AE2100937D008FC99D /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC9F9AD2100937D008FC99D /* Emoji.swift */; };
+		ACC9F9B2210094AB008FC99D /* Emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACC9F9B1210094AB008FC99D /* Emoji.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		ACC9F9A221008DBC008FC99D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACC9F9A521008DBC008FC99D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC9F9A721008DBC008FC99D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC9F9AD2100937D008FC99D /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		ACC9F9B1210094AB008FC99D /* Emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emoji.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		ACC9F99A21008DB9008FC99D /* searchrhino */ = {
 			isa = PBXGroup;
 			children = (
+				ACC9F9B3210094B0008FC99D /* Resources */,
+				ACC9F9B02100938D008FC99D /* Models */,
+				ACC9F9AF21009384008FC99D /* Controllers */,
 				ACC9F99B21008DB9008FC99D /* AppDelegate.swift */,
-				ACC9F99D21008DB9008FC99D /* ViewController.swift */,
-				ACC9F99F21008DB9008FC99D /* Main.storyboard */,
-				ACC9F9A221008DBC008FC99D /* Assets.xcassets */,
-				ACC9F9A421008DBC008FC99D /* LaunchScreen.storyboard */,
-				ACC9F9A721008DBC008FC99D /* Info.plist */,
 			);
 			path = searchrhino;
+			sourceTree = "<group>";
+		};
+		ACC9F9AF21009384008FC99D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC9F99D21008DB9008FC99D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACC9F9B02100938D008FC99D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACC9F9AD2100937D008FC99D /* Emoji.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACC9F9B3210094B0008FC99D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACC9F9B4210094C1008FC99D /* Storyboards */,
+				ACC9F9A221008DBC008FC99D /* Assets.xcassets */,
+				ACC9F9A721008DBC008FC99D /* Info.plist */,
+				ACC9F9B1210094AB008FC99D /* Emoji.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACC9F9B4210094C1008FC99D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ACC9F9A421008DBC008FC99D /* LaunchScreen.storyboard */,
+				ACC9F99F21008DB9008FC99D /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC9F9A621008DBC008FC99D /* LaunchScreen.storyboard in Resources */,
+				ACC9F9B2210094AB008FC99D /* Emoji.plist in Resources */,
 				ACC9F9A321008DBC008FC99D /* Assets.xcassets in Resources */,
 				ACC9F9A121008DB9008FC99D /* Main.storyboard in Resources */,
 			);
@@ -137,6 +176,7 @@
 			files = (
 				ACC9F99E21008DB9008FC99D /* ViewController.swift in Sources */,
 				ACC9F99C21008DB9008FC99D /* AppDelegate.swift in Sources */,
+				ACC9F9AE2100937D008FC99D /* Emoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G87HUM96UL;
 				INFOPLIST_FILE = searchrhino/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G87HUM96UL;
 				INFOPLIST_FILE = searchrhino/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,10 +1,5 @@
-//
-//  AppDelegate.swift
-//  searchrhino
-//
 //  Created by Jessica Joseph on 7/19/18.
-//  Copyright © 2018 Jessica Joseph. All rights reserved.
-//
+//  Copyright © 2018 B0RN BKLYN. All rights reserved.
 
 import UIKit
 
