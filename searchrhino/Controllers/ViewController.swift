@@ -5,18 +5,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // MARK: Outlets
+    // MARK : Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: Variables
+    // MARK : Variables
     var emojis: [Emoji] = []
+    var searchController  = UISearchController()
+    var resultsController = UITableViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // setup variables and views
         
         setupEmojis()
-        print(emojis)
+        setupSearchView()
         
         // setup tableview datasource and delegate
         tableView.delegate = self
@@ -31,6 +33,15 @@ class ViewController: UIViewController {
             let emoji = Emoji(name: (key as? String)!, emojiLiteral: (value as? String)!)
             emojis.append(emoji)
         }
+    }
+    
+    func setupSearchView() {
+        searchController = UISearchController(searchResultsController: resultsController)
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = self
+        
+        resultsController.tableView.delegate = self
+        resultsController.tableView.dataSource = self
     }
 }
 
@@ -50,4 +61,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+// MARK : Search Result Updater Function
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        // code
+    }
 }
