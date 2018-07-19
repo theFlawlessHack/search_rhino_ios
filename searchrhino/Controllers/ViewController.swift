@@ -5,14 +5,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Variables
     var emojis: [Emoji] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // setup variables and views
         
         setupEmojis()
         print(emojis)
+        
+        // setup tableview datasource and delegate
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func setupEmojis() {
@@ -26,6 +34,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK : TableView Datasource and Delegate Functions
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -37,7 +46,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath)
-        
+        cell.textLabel?.text = emojis[indexPath.row].emojiLiteral
         return cell
     }
     
